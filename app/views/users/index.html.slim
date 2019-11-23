@@ -1,0 +1,27 @@
+p#notice
+  = notice
+h1
+  | Users
+table
+  thead
+    tr
+      th
+        | タイトル
+      th
+        | 本文
+      th[colspan="3"]
+  tbody
+    - @users.each do |user|
+      tr
+        td
+          = user.title
+        td
+          = user.article
+        td
+          = link_to 'Show', user
+        td
+          = link_to 'Edit', edit_user_path(user)
+        td
+          = link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to '新規作成', new_user_path
