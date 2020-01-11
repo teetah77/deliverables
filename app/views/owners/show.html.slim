@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @owner.name
+p
+  strong Gender:
+  = @owner.gender
+p
+  strong Age:
+  = @owner.age
+p
+  strong Adress:
+  = @owner.adress
+p
+  strong Message:
+  = @owner.message
+
+=> link_to 'Edit', edit_owner_path(@owner)
+'|
+=< link_to 'Back', owners_path

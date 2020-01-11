@@ -1,0 +1,24 @@
+h1 お問い合わせ(追加して欲しい機能やご感想など何でもお送り下さい)
+
+= form_with model: @task, local: true do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name
+  .form-group
+    = f.label :gender
+    = f.text_field :gender
+  .form-group
+    = f.label :age
+    = f.number_field :age
+  .form-group
+    = f.label :adress
+    = f.text_field :adress
+  .form-group
+    = f.label :e-mail
+    = f.text_area :e-mail
+  .form-group
+    = f.label :message
+    = f.text_area :message
+  = link_to '戻る', owners_path, class: 'btn btn-primary'
+  = f.submit '送信', class: 'btn btn-primary ml-1'
+

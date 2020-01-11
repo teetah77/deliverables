@@ -1,0 +1,15 @@
+h1 記事内容の確認
+
+= form_with model: @user, local: true do |f|
+  table.table.table-hover
+    tbody
+      tr
+        th= User.human_attribute_name(:title)
+        td= @user.title
+        = f.hidden_field :title
+      tr
+        th= User.human_attribute_name(:article)
+        td= simple_format(@user.article)
+        = f.hidden_field :article
+  = f.submit '戻る', title: 'back', class: 'btn btn-secondary mr-3'
+  = f.submit '登録', class: 'btn btn-primary'

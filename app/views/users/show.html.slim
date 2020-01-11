@@ -1,13 +1,13 @@
-p#notice
-  = notice
-p
-  strong
-    | Title:
-  = @user.title
-p
-  strong
-    | Article:
-  = @user.article
-= link_to 'Edit', edit_user_path(@user)
-|  | 
-= link_to 'Back', users_path
+.nav.justify-content-end
+  = link_to 'TOP', users_path, class: 'nav-link'
+table.table.table-hover
+  tbody
+    tr
+      th= User.human_attribute_name(:title)
+      td= @user.title
+    tr
+      th= User.human_attribute_name(:article)
+      td= simple_format(h(@user.article),{},sanitize: false, wrapper_tag: "div")
+    tr
+
+= link_to '編集', edit_user_path(@user)

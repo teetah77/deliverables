@@ -4,6 +4,8 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
+  require("trix")
+  require("@rails/actiontext")
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
@@ -15,3 +17,6 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+require("trix")
+require("@rails/actiontext")
