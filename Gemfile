@@ -58,6 +58,7 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'bootstrap'
 gem 'devise'
+gem 'actiontext'
 
 group :development do
   gem 'letter_opener_web'
